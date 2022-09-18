@@ -7,10 +7,12 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
 public class Listener implements ITestListener {
     ExtentReports extent = ExtentReport.extentReportGenerator();
     ExtentTest test;
     WebDriver driver;
+
     public void onFinish(ITestContext context) {
         extent.flush();
     }
@@ -32,10 +34,8 @@ public class Listener implements ITestListener {
     public void onTestSkipped(ITestResult result) {
     }
 
-
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
     }
-
 
     public void onStart(ITestContext context) {
     }
