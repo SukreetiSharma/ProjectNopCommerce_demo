@@ -10,6 +10,13 @@
             <class name="Test.TestSerachProduct"/>
         </classes>
     </test>
+    <test name="Verify User is able to buy GiftCard product">
+        <parameter name="browserName" value="chrome"></parameter>
+        <parameter name="testRunId" value="TCTC-2"/>
+        <classes>
+            <class name="Test.TestGiftCards"/>
+        </classes>
+    </test>
     <test name="Verify User is able to Register">
         <parameter name="browserName" value="chrome"></parameter>
         <parameter name="testRunId" value="TCTC-1"/>

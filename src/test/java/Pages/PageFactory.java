@@ -6,6 +6,7 @@ public class PageFactory {
     WebDriver driver;
     public RegistrationPage RegPage;
     public SearchProduct Search;
+    public GiftCardsPage GiftCardPage;
     public PageFactory(WebDriver driver){
         this.driver = driver;
     }
@@ -22,5 +23,12 @@ public class PageFactory {
             Search = new SearchProduct(driver);
         }
         return Search;
+    }
+
+    public GiftCardsPage getGiftCardProduct(){
+        if(GiftCardPage == null){
+            GiftCardPage = new GiftCardsPage(driver);
+        }
+        return GiftCardPage;
     }
 }
