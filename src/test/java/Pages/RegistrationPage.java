@@ -1,6 +1,7 @@
 package Pages;
 
 import net.jodah.failsafe.internal.util.Assert;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -10,6 +11,7 @@ import java.time.Duration;
 public class RegistrationPage {
     WebDriver driver;
     WebDriverWait wait;
+    String s = RandomStringUtils.randomAlphanumeric(8);
     By Register = By.xpath("//a[contains(text(),'Register')]");
     By Gender = By.xpath("(//input[@name='Gender'])[1]");
     By FName = By.xpath("//input[@name='FirstName']");
@@ -32,7 +34,7 @@ public class RegistrationPage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(FName));
         driver.findElement(FName).sendKeys("Adye");
         driver.findElement(LName).sendKeys("Sharma");
-        driver.findElement(Emails).sendKeys("Adye@gmail.com");
+        driver.findElement(Emails).sendKeys(s + "@gmail.com");
         wait.until(ExpectedConditions.visibilityOfElementLocated(Pass));
         driver.findElement(Pass).sendKeys("Adye@123");
         driver.findElement(confirmPass).sendKeys("Adye@123");

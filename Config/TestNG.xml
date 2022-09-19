@@ -3,6 +3,13 @@
     <listeners>
         <listener class-name="Report.Listener"/>
     </listeners>
+    <test name="Verify User is able to Search product">
+        <parameter name="browserName" value="chrome"></parameter>
+        <parameter name="testRunId" value="TCTC-3"/>
+        <classes>
+            <class name="Test.TestSerachProduct"/>
+        </classes>
+    </test>
     <test name="Verify User is able to Register">
         <parameter name="browserName" value="chrome"></parameter>
         <parameter name="testRunId" value="TCTC-1"/>
